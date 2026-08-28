@@ -39,3 +39,10 @@ Rebuild project for Crítica de Guerrero, a Spanish-first news publication servi
 3. Build article and category templates.
 4. Establish the public-image and private-original-archive workflow.
 5. Publish and test several real stories before broader historical recovery.
+
+### Implementation plans
+
+- [SEO and social metadata plan](docs/SEO_AND_SOCIAL_METADATA_PLAN.md)
+- [Netlify domain and redirect plan](docs/NETLIFY_DOMAIN_AND_REDIRECT_PLAN.md)
+- [CMS and editor access plan](docs/CMS_AND_EDITOR_ACCESS_PLAN.md)
+- [Article and category template plan](docs/ARTICLE_AND_CATEGORY_TEMPLATE_PLAN.md)
