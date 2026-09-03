@@ -1,3 +1,8 @@
+> **Source of truth**
+>
+> This is the authoritative CMS and editor-access specification for Crítica de Guerrero.
+> Earlier drafts are retained only for project history and must not be updated independently.
+
 # CMS and Editorial Workflow
 
 ## Status
