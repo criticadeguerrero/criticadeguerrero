@@ -1,3 +1,8 @@
+> **Archived draft — do not update.**
+>
+> The authoritative CMS and editor-access specification is now:
+> [`CMS_EDITORIAL_WORKFLOW.md`](CMS_EDITORIAL_WORKFLOW.md)
+
 # CMS and editor access plan
 
 ## Purpose
