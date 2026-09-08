@@ -1,1 +1,124 @@
+backend:
+  name: git-gateway
+  branch: main
 
+publish_mode: editorial_workflow
+locale: es
+
+site_url: https://criticadeguerrero.com.mx
+display_url: https://criticadeguerrero.com.mx
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: "noticias"
+    label: "Noticias"
+    label_singular: "Nota"
+    folder: "content/noticias"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{section}}"
+
+    fields:
+      - label: "Titular"
+        name: "title"
+        widget: "string"
+
+      - label: "Resumen"
+        name: "summary"
+        widget: "text"
+        required: false
+        hint: "Una o dos líneas que expliquen la nota."
+
+      - label: "Sección"
+        name: "section"
+        widget: "select"
+        options:
+          - "Política"
+          - "Seguridad"
+          - "Acapulco"
+          - "Guerrero"
+          - "Cultura"
+          - "Deportes"
+          - "Espectáculos"
+          - "Sociedad"
+          - "Opinión"
+
+      - label: "Autor"
+        name: "author"
+        widget: "string"
+        default: "Redacción Crítica de Guerrero"
+
+      - label: "Fecha y hora"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        date_format: "DD/MM/YYYY"
+        time_format: "HH:mm"
+        picker_utc: false
+
+      - label: "Imagen principal"
+        name: "image"
+        widget: "image"
+        required: false
+        choose_url: false
+
+      - label: "Texto alternativo de la imagen"
+        name: "image_alt"
+        widget: "string"
+        required: false
+        hint: "Describe lo que se ve en la imagen para lectores que usan lector de pantalla."
+
+      - label: "Pie de foto"
+        name: "image_caption"
+        widget: "text"
+        required: false
+
+      - label: "Crédito de foto"
+        name: "image_credit"
+        widget: "string"
+        required: false
+
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
+        required: false
+        allow_add: true
+
+      - label: "Destacar en portada"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
+
+      - label: "Última hora"
+        name: "breaking"
+        widget: "boolean"
+        default: false
+        required: false
+
+      - label: "Expira última hora"
+        name: "breaking_expires_at"
+        widget: "datetime"
+        required: false
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        date_format: "DD/MM/YYYY"
+        time_format: "HH:mm"
+        picker_utc: false
+
+      - label: "Nota de actualización o corrección"
+        name: "correction_note"
+        widget: "text"
+        required: false
+
+      - label: "Contenido"
+        name: "body"
+        widget: "markdown"
